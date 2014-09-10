@@ -7,8 +7,8 @@ set tabstop=2
 
 "Espaços ao inves de tabs
 set expandtab
-
 set autoindent
+filetype plugin indent on
 
 "Mostra linha e coluna atuais
 set ruler
@@ -32,8 +32,8 @@ set showmatch
 colorscheme desert
 set background=dark
 
-"Faz régua na coluna 80
-set colorcolumn=85
+"Faz régua na coluna 81
+set colorcolumn=81
 highlight ColorColumn ctermbg=DarkGray
 
 "Tira todos os backups
