@@ -1,10 +1,13 @@
 [
-	{ "keys": ["ctrl+o"], "command": "prompt_open_folder" },
-	{ "keys": ["ctrl+'"], "command": "show_panel", "args": {"panel": "console", "toggle": true} },
-	{ "keys": ["f11"], "command": "delete_trailing_spaces" },
-	{ "keys": ["f12"], "command": "reindent", "args": {"single_line": false} },
+  { "keys": ["ctrl+o"], "command": "prompt_open_folder" },
+  { "keys": ["ctrl+shift+o"], "command": "prompt_open_file" },
+  { "keys": ["ctrl+'"], "command": "show_panel", "args": {"panel": "console", "toggle": true} },
+  { "keys": ["f11"], "command": "delete_trailing_spaces" },
+  { "keys": ["f12"], "command": "reindent", "args": {"single_line": false} },
   { "keys": ["ctrl+d"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"} },
   { "keys": ["shift+enter"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Add Line.sublime-macro"} },
   { "keys": ["alt+up"], "command": "swap_line_up" },
-  { "keys": ["alt+down"], "command": "swap_line_down" }
+  { "keys": ["alt+down"], "command": "swap_line_down" },
+  { "keys": ["ctrl+tab"], "command": "next_view" },
+  { "keys": ["ctrl+shift+tab"], "command": "prev_view" }
 ]
