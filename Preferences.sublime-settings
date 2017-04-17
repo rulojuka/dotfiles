@@ -8,5 +8,8 @@
 	"ignored_packages":
 	[
 		"Vintage"
-	]
+	],
+
+    // Controls auto pairing of quotes, brackets etc
+    "auto_match_enabled": false
 }
