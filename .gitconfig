@@ -3,4 +3,6 @@
 	email = alessandro.palmeira@gmail.com
 [core]
 	editor = vim
-  sparsecheckout = true
+	sparsecheckout = true
+[push]
+	default = simple
