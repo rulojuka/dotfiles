@@ -195,3 +195,6 @@ exec --no-startup-id firefox --class="firefox-whatsapp" -P "firefox-whatsapp" -p
 exec --no-startup-id "gnome-terminal -e mocp"
 exec --no-startup-id i3-msg 'workspace $wksp3; exec i3-sensible-terminal'
 
+# Lock Screen:  super + l
+bindsym Mod4+l exec i3lock -c 111111 -f
+
