@@ -9,7 +9,7 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
-set $mod Mod1
+set $mod Mod4
 
 # My variables
 set $wksp1 "1: www"
@@ -18,7 +18,7 @@ set $wksp3 "3: term"
 set $wksp4 "4: code"
 set $wksp5 5
 set $wksp6 6
-set $wksp7 7
+set $wksp7 "7: vault"
 set $wksp8 "8: comm"
 set $wksp9 "9: files"
 set $wksp0 "10: mocp"
@@ -172,12 +172,17 @@ bar {
 # Minhas configs
 
 workspace_auto_back_and_forth yes
+focus_follows_mouse no
+bindsym Ctrl+Shift+1 exec --no-startup-id setxkbmap br
+bindsym Ctrl+Shift+2 exec --no-startup-id setxkbmap de -variant qwerty
 
 # Assigns
 
 assign [class="firefox-default"] $wksp1
 
 assign [class="firefox-private"] $wksp2
+
+assign [class="KeePass2"] $wksp7
 
 assign [class="firefox-whatsapp"] $wksp8
 assign [class="TelegramDesktop"] $wksp8
@@ -195,6 +200,12 @@ exec --no-startup-id firefox --class="firefox-whatsapp" -P "firefox-whatsapp" -p
 exec --no-startup-id "gnome-terminal -e mocp"
 exec --no-startup-id i3-msg 'workspace $wksp3; exec i3-sensible-terminal'
 
-# Lock Screen:  super + l
-bindsym Mod4+l exec i3lock -c 111111 -f
+set $mode_system System (l) lock
+mode "$mode_system" {
+  bindsym l exec i3lock -c 111111 -f
+  # back to normal: Enter or Escape
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+}
+bindsym $mod+Pause mode "$mode_system"
 
