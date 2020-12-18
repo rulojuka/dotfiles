@@ -168,6 +168,10 @@ bar {
         status_command i3status | ~/.config/i3/i3-keyboard-layout.sh i3status 
 }
 
+# Second display configuration
+
+bindsym $mod+Shift+u exec xrandr --output HDMI-0 --off
+bindsym $mod+Shift+i exec xrandr --output HDMI-0 --auto --left-of VGA-0
 
 # Minhas configs
 
